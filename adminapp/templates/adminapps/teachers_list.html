@@ -1,0 +1,131 @@
+{% extends 'adminapps/index.html' %}
+{% block content %}
+{% load static %}
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">
+                        Teachers
+                    </h3>
+                </div>
+                <div class="col-auto text-end float-end ms-auto">
+                    <a href="{% url 'admins:addteacher' %}" class="btn btn-primary"><i class="fas fa-plus"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-table">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-center mb-0 datatable">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            ID
+                                        </th>
+                                        <th>
+                                            Name
+                                        </th>
+                                        <!-- <th>
+                                            Class
+                                        </th> -->
+                                        <th>
+                                            Gender
+                                        </th>
+                                        <th>
+                                            Subject
+                                        </th>
+                                        <!-- <th>
+                                            Section
+                                        </th> -->
+                                        <th>
+                                            Mobile Number
+                                        </th>
+                                        <th>
+                                            Address
+                                        </th>
+                                        <th class="text-end">
+                                            Action
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for t in teacher %}
+                                        <tr>
+                                            <td>
+                                                {{t.teacher_id}}
+                                            </td>
+                                            <td>
+                                                <h2 class="table-avatar">
+                                                    
+                                                    <a href="">{{t.name}}</a>
+                                                </h2>
+                                            </td>
+                                            <!-- <td>
+                                                
+                                            </td> -->
+                                            <td>
+                                                {{t.gender}}
+                                            </td>
+                                            <td>
+                                                {{t.qualification}}
+                                            </td>
+                                            <!-- <td>
+                                                A
+                                            </td> -->
+                                            <td>
+                                                {{t.phone}}
+                                            </td>
+                                            <td>
+                                                {{t.city}}
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="actions">
+                                                    <a onclick="deleteTeacher('{{ t.id }}')" class="btn btn-sm bg-danger-light">
+                                                        <i class="fas fa-trash"></i> Delete
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    function deleteTeacher(id) {
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this imaginary file!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    swal("Poof! Your imaginary file has been deleted!", {
+                        icon: "success",
+                    });
+                    setTimeout(function () {
+                        window.location.href = "/adminapp/deleteteacher/" + id
+                    }, 1000);
+                } else {
+                    swal("Your imaginary file is safe!");
+                }
+            });
+    }
+</script>
+
+{% endblock %}

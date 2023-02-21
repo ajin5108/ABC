@@ -1,0 +1,91 @@
+{% extends 'adminapps/index.html' %}
+{% block content %}
+{% load static %}
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">
+                        Courses
+                    </h3>
+                    
+                </div>
+                <div class="col-auto text-end float-end ms-auto">
+                    
+                    <a href="{% url 'admins:addcourses' %}" class="btn btn-primary"><i class="fas fa-plus"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-table">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-center mb-0 datatable">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            ID
+                                        </th>
+                                        <th>
+                                            Course Name
+                                        </th>
+                                        <th>
+                                            Duration
+                                        </th>
+                                        <th>
+                                            Fees
+                                        </th>
+                                        <th>
+                                            Max No of Students
+                                        </th>
+                                        <th class="text-end">
+                                            Action
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for c in course %}
+                                        <tr>
+                                            <td>
+                                                {{c.course_id}}
+                                            </td>
+                                            <td>
+                                                <h2>
+                                                    <a>{{c.couse_name}}</a>
+                                                </h2>
+                                            </td>
+                                            <td>
+                                                {{c.Duration}}
+                                            </td>
+                                            <td>
+                                                {{c.total_fees}}
+                                            </td>
+                                            <td>
+                                                {{c.max_students}}
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="actions">
+                                                    <a href="{% url 'admins:editcourse' c.id %}" class="btn btn-sm bg-success-light me-2">
+                                                        <i class="fas fa-pen"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+{% endblock %}

@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <title>Preskool - Dashboard</title>
+        <link rel="shortcut icon" href="{% static 'websites/logo.webp' %}">
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap">
+        <link rel="stylesheet"
+              href="{% static 'webapp/plugins/bootstrap/css/bootstrap.min.css' %}">
+        <!-- <link rel="stylesheet"
+              href="{% static 'webapp/plugins/fontawesome/css/fontawesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'webapp/plugins/fontawesome/css/all.min.css' %}"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="{% static 'webapp/css/style.css' %}">
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <div class="header">
+                <div class="header-left">
+                    <a href="#" class="logo">
+                        <img src="{% static 'websites/logo.webp' %}" alt="Logo">
+                    </a>
+                    <a href="#" class="logo logo-small">
+                        <img src="{% static 'websites/logo.webp' %}" alt="Logo" width="30" height="30">
+                    </a>
+                </div>
+                <a href="javascript:void(0);" id="toggle_btn">
+                    <i class="fas fa-align-left"></i>
+                </a>
+                <a class="mobile_btn" id="mobile_btn">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <ul class="nav user-menu">
+                    
+                    <li class="nav-item dropdown has-arrow">
+                        <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+                            <span class="user-img">
+                                <img class="rounded-circle"
+                                     src="{% static 'default.jpg' %}"
+                                     width="31"
+                                     alt="Ryan Taylor">
+                                     <span class="status online"></span>
+                            </span>
+                            <span>{{details.branch_name|upper}}</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="user-header">
+                                <div class="avatar avatar-sm">
+                                    <img src="{% static 'webapp/img/profiles/avatar-01.jpg' %}"
+                                         alt="User Image"
+                                         class="avatar-img rounded-circle">
+                                </div>
+                                <div class="user-text">
+                                    <h6>{{details.branch_id}}</h6>
+                                    <p class="text-muted mb-0">
+                                        {{details.branch_name}}
+                                    </p>
+                                </div>
+                            </div>
+                            <a class="dropdown-item" href="{% url 'branch:branchprofile' %}">My Profile</a>
+                            <!-- <a class="dropdown-item" href="inbox.html">Inbox</a> -->
+                            <a class="dropdown-item" href="{% url 'branch:logout_view' %}">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-inner slimscroll">
+                    <div id="sidebar-menu" class="sidebar-menu">
+                        <ul>
+                            <li class="menu-title">
+                                <span>Main Menu</span>
+                            </li>
+                            <li {% if is_master %} class="active"{% endif %}>
+                                <a href="{% url 'branch:master' %}"><i class="fa fa-th"></i> <span>Dashboard</span></a>
+                            </li>
+                            <li {% if is_students %} class="active submenu"
+                                {% elif is_studentslist %} class="active submenu"
+                                {% elif is_all_students_list %} class="active submenu"
+                                {% elif is_add_students_branch %} class="active submenu"
+                                {% endif %}>
+                                <a href="#"><i class="fas fa-user-graduate"></i> <span> Students</span> <span class="menu-arrow"></span></a>
+                                <ul>
+                                    <li {% if is_students %} class="active"
+                                    {% elif is_studentslist %} class="active" {% endif %}>
+                                        <a href="{% url 'branch:branchstudents' %}">Student View</a>
+                                    </li>
+                                    <li {% if is_all_students_list %} class="active"{% endif %}>
+                                        <a href="{% url 'branch:allbranchstudentslist' %}">Student List</a>
+                                    </li>
+                                    <li {% if is_add_students_branch %} class="active"{% endif %}>
+                                        <a href="{% url 'branch:addstudent' %}">Student Add</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li {% if is_teachers %} class="active submenu"
+                                {% elif is_add_teachers %} class="active submenu"
+                                {% endif %}>
+                                <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span class="menu-arrow"></span></a>
+                                <ul>
+                                    <li {% if is_teachers %} class="active"{% endif %}>
+                                        <a href="{% url 'branch:teacherslist' %}">Teacher List</a>
+                                    </li>
+                                    <li {% if is_add_teachers %} class="active"{% endif %}>
+                                        <a href="{% url 'branch:addteacherbranch' %}">Teacher Add</a>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                      
+                            <!-- <li class="submenu">
+                                <a href="#"><i class="fas fa-file-invoice-dollar"></i> <span> Accounts</span> <span class="menu-arrow"></span></a>
+                                <ul>
+                                    <li>
+                                        <a href="fees-collections.html">Fees Collection</a>
+                                    </li>
+                                    <li>
+                                        <a href="expenses.html">Expenses</a>
+                                    </li>
+                                    <li>
+                                        <a href="salary.html">Salary</a>
+                                    </li>
+                                    <li>
+                                        <a href="add-fees-collection.html">Add Fees</a>
+                                    </li>
+                                    <li>
+                                        <a href="add-expenses.html">Add Expenses</a>
+                                    </li>
+                                    <li>
+                                        <a href="add-salary.html">Add Salary</a>
+                                    </li>
+                                </ul>
+                            </li>
+                             -->
+                            <li {% if is_fees %} class="active"{% endif %}>
+                                <a href="{% url 'branch:fees' %}"><i class="fas fa-comment-dollar"></i> <span>Fees</span></a>
+                            </li>
+                          
+                            <!-- <li>
+                                <a href="event.html"><i class="fas fa-calendar-day"></i> <span>Events</span></a>
+                            </li> -->
+                            <!-- <li>
+                                <a href="time-table.html"><i class="fas fa-table"></i> <span>Time Table</span></a>
+                            </li> -->
+                            <!-- <li class="menu-title">
+                                <span>Pages</span>
+                            </li>
+                            <li class="submenu">
+                                <a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
+                                <ul>
+                                    <li>
+                                        <a href="login.html">Login</a>
+                                    </li>
+                                    <li>
+                                        <a href="register.html">Register</a>
+                                    </li>
+                                    <li>
+                                        <a href="forgot-password.html">Forgot Password</a>
+                                    </li>
+                                    <li>
+                                        <a href="error-404.html">Error Page</a>
+                                    </li>
+                                </ul>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            {% block content %}
+            {% endblock %}
+        </div>
+        {% block js %}
+        {% endblock  %}
+        <script src="{% static 'webapp/js/jquery-3.6.0.min.js' %}"></script>
+        <script src="{% static 'webapp/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'webapp/plugins/slimscroll/jquery.slimscroll.min.js' %}"></script>
+        <script src="{% static 'webapp/plugins/apexchart/apexcharts.min.js' %}"></script>
+        <script src="{% static 'webapp/plugins/apexchart/chart-data.js' %}"></script>
+        <script src="{% static 'webapp/js/script.js' %}"></script>
+         
+    </body>
+</html>

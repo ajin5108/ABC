@@ -1,0 +1,145 @@
+{% extends 'branch/master.html' %}
+{% block content %}
+{% load static %}
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">
+                        Add Exam
+                    </h3>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5 class="form-title">
+                                        <span>Exam Information</span>
+                                    </h5>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Exam Name
+                                        </label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Department
+                                        </label>
+                                        <select class="form-control select">
+                                            <option>
+                                                Select Department
+                                            </option>
+                                            <option>
+                                                FASHION DESIGNING
+                                            </option>
+                                            <option>
+                                                TTC
+                                            </option>
+                                            <option>
+                                                LAB TECHNITION
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Batch
+                                        </label>
+                                        <select class="form-control select">
+                                            <option>
+                                                Select Batch
+                                            </option>
+                                            <option>
+                                                2019-2021
+                                            </option>
+                                            <option>
+                                                2020-2022
+                                            </option>
+                                            <option>
+                                                2021-2023
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Subject
+                                        </label>
+                                        <select class="form-control select" required>
+                                            <option>
+                                                Select Subject
+                                            </option>
+                                            <option>
+                                                FASHION MARKETING
+                                            </option>
+                                            <option>
+                                                FASHION DESIGNING
+                                            </option>
+                                            <option>
+                                                CAD
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Start Time
+                                        </label>
+                                        <input type="time" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>
+                                            End Time
+                                        </label>
+                                        <input type="time" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Exam Date
+                                        </label>
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Total Mark
+                                        </label>
+                                        <input type="number" class="form-control" min="0" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-end">
+                                    <a href="{% url 'branch:examaddbtwo' %}" class="btn btn-info ">
+                                        Next >
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

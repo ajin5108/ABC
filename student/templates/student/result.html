@@ -1,0 +1,67 @@
+{% extends 'student/master.html' %}
+{% load static %}
+{% block content %}
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+        <div class="page-header">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 class="page-title">Result</h3>
+                    <ul class="breadcrumb">
+                        <li><a href="{% url 'student:home' %}">Dashboard /</a></li>
+                        <li class="breadcrumb-item active"> Result</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                                <div class="table-responsive mt-4">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Subject Name</th>
+                                                <th>Date</th>
+                                                <th>Total Mark</th>
+                                                <!-- <th>Mark Obtained</th> -->
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody  id="tbodyofInvoice">
+                                            {% for e in exam %}
+                                            <tr>
+                                                <td>
+                                                    {{e.exam_name}}
+                                                </td>
+                                                <td>
+                                                    {{e.exam_date}}
+                                                </td>
+                                                <td>
+                                                    {{e.total_mark}}
+                                                </td>
+                                                <!-- <td>
+                                                    30
+                                                </td> -->
+                                                <td >
+                                                  <a href="{% url 'student:showresult' e.id %}" class="btn btn-success">Show Result</a>
+                                                </td>
+                                            </tr>
+                                            {% endfor %}                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

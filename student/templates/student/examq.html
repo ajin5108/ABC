@@ -1,0 +1,143 @@
+{% extends 'student/master.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .list li {
+        padding: 10px;
+    }
+
+    .pagination li {
+        padding: 10px;
+    }
+</style>
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+        <div class="row justify-content-lg-center">
+            <div class="col-lg-12">
+
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="card-title d-flex justify-content-between">
+                                    <span style="color: navy;"><i class="fa fa-edit"></i> Physics Exam</span>
+                                    <span style="color: navy;"> Total Mark : 25</span>
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title d-flex justify-content-between">
+                                    <span> Question Number : 1</span>
+                                    <span> Mark : 5</span>
+                                </h6><br>
+
+                                <form action="">
+                                    <ul class="list-group list-group-numbered">
+                                        <li class="py-0">
+                                            The breakdown in a reverse biased p-n junction diode is more likely to occur
+                                            due to....?
+                                        </li>
+                                    </ul><br>
+                                    <ul class="list-group list px-4 ">
+                                        <li>
+                                            <div class="md-form">
+                                                <i class="fas fa-pencil-alt prefix"></i>
+                                                <textarea id="form10" class="md-textarea form-control"
+                                                    rows="3"></textarea>
+
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
+                        <div class=" ">
+                            <div class="row">
+                                <div class="col-lg-12">
+
+                                    <div class="btn-toolbar text-center">
+                                        <div class=" btn-group-md">
+                                            <button type="button" class="btn btn-primary">Mark For Review</button>
+                                            <button type="button" class="btn btn-primary"> Skip</button>
+                                            <button type="button" class="btn btn-primary">Reset</button>
+                                        </div>
+                                        <div class="d-grid gap-2 d-md-flex text-end">
+                                            <button type="button" class="btn btn-success">Save &
+                                                Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="card-title d-flex justify-content-between">
+                                    <span><button type="button" class="btn btn-rounded btn-warning btn-sm">Mark : 10
+                                        </button></span>
+                                    <span><button type="button" class="btn btn-rounded btn-danger btn-sm"><i
+                                                class="fa fa-bell"></i>&nbsp; Exam Started</button></span>
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title btn-sm d-grid gap-2">
+                                    <a type="button" href="{% url 'student:examinst' %}"
+                                        class="btn btn-primary">Instructions</a>
+                                </h6>
+                                <div class="row">
+                                    <div class="col-lg-12">
+
+                                        <div class="btn col-lg-12">
+                                            <div class=" btn-group-md ">
+                                                <button type="button" class="btn btn-danger col-lg-8 col-sm-4">Finish
+                                                    Exam</button>
+                                                <button type="button" class="btn btn-success col-lg-3 col-sm-4"> <i
+                                                        class="fa fa-expand"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class=" text-center"><b>hr : min : sec</b></h5>
+                                    <h5 class="text-center"><span id="timer-countdown"></span></h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="card-body">
+                            <h6>Time Count from 3</h6>
+                            <span id="timer-countdown"></span>
+                        </div> -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="card-title d-flex justify-content-between">
+                                    <span style="color: navy;">Questions</span>
+
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <ul class="pagination mb-4">
+                                        <li class=""><a class="page-link" href="#">1</a></li>
+                                        <li class=""><a class="page-link" href="#">2</a></li>
+                                        <li class=""><a class="page-link" href="#">3</a></li>
+                                        <li class=""><a class="page-link" href="#">4</a></li>
+                                        <li class=""><a class="page-link" href="#">5</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

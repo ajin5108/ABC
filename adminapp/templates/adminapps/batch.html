@@ -1,0 +1,90 @@
+{% extends 'adminapps/index.html' %}
+{% block content %}
+{% load static %}
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+
+        {% if status == 1 %}
+        
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Successfully</strong> add the Batch.
+                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+            </div>
+        
+        {% endif %}
+        
+            
+        
+        
+
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">
+                        Add Batch
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5 class="form-title">
+                                        <span>Add Batch Details</span>
+                                    </h5>
+                                </div>
+                               
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>
+                                            course Name
+                                        </label>
+                                        <select class="form-control select" name="course" required>
+                                            {% for c in course %}
+                                            <option value="{{c.id}}">
+                                                {{c.couse_name}}
+                                            </option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Starting Date
+                                        </label>
+                                        <input type="date" class="form-control" name="startdate" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Ending Date
+                                        </label>
+                                        <input type="date" class="form-control" name="endingdate" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary" >
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

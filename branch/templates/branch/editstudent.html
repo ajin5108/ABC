@@ -1,0 +1,173 @@
+{% extends 'branch/master.html' %}
+{% block content %}
+{% load static %}
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">
+                        Edit Students
+                    </h3>
+                    <ul class="breadcrumb">
+                        <li class="">
+                            <a href="{% url 'branch:master' %}">Dashboard /</a>
+                        </li>
+                        <li class="">
+                            <a href="{% url 'branch:branchstudents' %}">Students /</a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            Edit Students
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form method="post" action="">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5 class="form-title">
+                                        <span>Student Information</span>
+                                    </h5>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>
+                                            First Name
+                                        </label>
+                                        <input type="text" name="name" value="{{editdetails.first_name}}" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Last Name
+                                        </label>
+                                        <input type="text" name="lastname" value="{{editdetails.last_name}}" class="form-control" required>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Student Id
+                                        </label>
+                                        <input type="text" name="studentid" class="form-control">
+                                    </div>
+                                </div> -->
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Gender
+                                        </label>
+                                        <input type="text" value="{{editdetails.gender}}" name="gender" required class="form-control select" required>
+                                        <!-- <select name="gender" required class="form-control select" value="{{editdetails.gender}}">
+                                            <option>
+                                                Select Gender
+                                            </option>
+                                            <option value="Female">
+                                                Female
+                                            </option>
+                                            <option value="Male">
+                                                Male
+                                            </option>
+                                            <option value="Others">
+                                                Others
+                                            </option>
+                                        </select> -->
+                                    </div>
+                                </div>
+                              
+                               
+                              
+                              
+                              
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Mobile Number
+                                        </label>
+                                        <input type="text" value="{{editdetails.phone}}" name="phone" class="form-control" required>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Student Image
+                                        </label>
+                                        <input type="file" class="form-control">
+                                    </div>
+                                </div> -->
+                                <div class="col-12">
+                                    <h5 class="form-title">
+                                        <span>Login Details</span>
+                                    </h5>
+                                </div>
+                               
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group" >
+                                        <label>
+                                            Email ID
+                                        </label>
+                                        <input type="email" name="email" value="{{editdetails.email}}" class="form-control" required>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Password
+                                        </label>
+                                        <input type="text" name="password" value="{{editdetails.password}}" class="form-control" disabled>
+                                    </div>
+                                </div> -->
+                                
+                               
+                               
+                               
+                                <div class="col-12">
+                                    <h5 class="form-title">
+                                        <span>Parent Information</span>
+                                    </h5>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Father's Name
+                                        </label>
+                                        <input type="text" name="fathername" value="{{editdetails.fathername}}" class="form-control" required>
+                                    </div>
+                                </div>
+                              
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Father's Mobile
+                                        </label>
+                                        <input type="text" name="fatherphone" value="{{editdetails.fatherphone}}" class="form-control" required>
+                                    </div>
+                                </div>
+                              
+                              
+                             
+                               
+  
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

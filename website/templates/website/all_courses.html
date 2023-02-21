@@ -1,0 +1,273 @@
+{% extends 'website/index.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- <style>
+    .row{
+        height: 300px;
+    }
+    .img_list {
+        min-height: 300px;
+    }
+    
+    .course_list_desc {
+        height:300px;
+    }
+    .details_list_col a.button_outline {
+        margin-top: 100px;
+    }
+</style> -->
+
+
+<div class="sub_header bg_1">
+    <div id="intro_txt">
+        <h1> <strong>ABC</strong> Training Academy courses</h1>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, pariatur?</p> -->
+    </div>
+</div>
+<!--End sub_header -->
+
+<!-- <div id="position">
+    <div class="container">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Category</a></li>
+            <li>Page active</li>
+        </ul>
+    </div>
+</div> -->
+<!-- Position -->
+
+
+
+<div class="container_gray_bg">
+    <div class="container margin_60">
+        <div class="row">
+            <div class="col-md-9">
+
+                <div class="strip_all_courses_list wow fadeIn" data-wow-delay="0.1s">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="img_list">
+                                <a href="{% url 'web:ttccourse' %}"><img src="{% static 'websites/img/4G3A6344.JPG' %}" alt="">
+                                    <div class="short_info">
+                                        <h3>MONTESSORI TTC</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="clearfix visible-xs-block">
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="course_list_desc">
+                                <h3><strong>Montessori</strong> TTC</h3>
+                                <p>
+                                    Montessori training is a transformative voyage that exacerbates one's wisdom and the potential of children and their ability to recast the world. Dr Maria Montessori gave special consideration to the formative psychic powers of the young child, which lead to all-around development in early childhood development (ECE and ECD).
+                                </p>
+                                <ul class="add_info">
+                                    <li>
+                                        <div class="tooltip_styled tooltip-effect-4">
+                                            <span class="tooltip-item"><i class="pe-7s-compass"></i></span>
+                                            <div class="tooltip-content">
+                                                Dedicated Study Plan
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tooltip_styled tooltip-effect-4">
+                                            <span class="tooltip-item"><i class="pe-7s-hourglass"></i></span>
+                                            <div class="tooltip-content">
+                                                Admission Deadline 31/11/2015
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tooltip_styled tooltip-effect-4">
+                                            <span class="tooltip-item"><i class="pe-7s-medal"></i></span>
+                                            <div class="tooltip-content">
+                                                Most Requested Course
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2">
+                            <div class="details_list_col">
+                                <div>
+                                    <a href="{% url 'web:ttccourse' %}" class="button_outline">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End strip -->
+
+
+                <div class="strip_all_courses_list wow fadeIn" data-wow-delay="0.1s">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="img_list">
+                                <a href="{% url 'web:fashioncourse' %}"><img src="{% static 'websites/img/fassion.jpg' %}" alt="">
+                                    <div class="short_info">
+                                        <h3>Fashion Designing</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="clearfix visible-xs-block">
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="course_list_desc">
+                                <h3><strong>Fashion Designing</strong> diploma</h3>
+                                <p>
+                                    Fashion Designing is one of the most prevalent design professions among students. Every year thousands of aspirants apply to various Fashion Design colleges across the country with an aspiration to become triumphant fashion designers in future. If you too are desiring a career in Fashion Design, you have anchored at the right place. 
+                                </p>
+                                <ul class="add_info">
+                                    <li>
+                                        <div class="tooltip_styled tooltip-effect-4">
+                                            <span class="tooltip-item"><i class="pe-7s-compass"></i></span>
+                                            <div class="tooltip-content">
+                                                Dedicated Study Plan
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tooltip_styled tooltip-effect-4">
+                                            <span class="tooltip-item"><i class="pe-7s-hourglass"></i></span>
+                                            <div class="tooltip-content">
+                                                Admission Deadline 31/11/2015
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tooltip_styled tooltip-effect-4">
+                                            <span class="tooltip-item"><i class="pe-7s-medal"></i></span>
+                                            <div class="tooltip-content">
+                                                Most Requested Course
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2">
+                            <div class="details_list_col">
+                                <div>
+                                    <a href="{% url 'web:fashioncourse' %}" class="button_outline">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End strip -->
+
+                <div class="strip_all_courses_list wow fadeIn" data-wow-delay="0.1s">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="img_list">
+                                <a href=""><img src="{% static 'websites/img/k.jpg' %}" alt="">
+                                    <div class="short_info">
+                                        <h3>BEAUTICIAN COURSE</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="clearfix visible-xs-block">
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="course_list_desc">
+                                <h3><strong>Beautician </strong> courses</h3>
+                                <p>
+                                    The Makeup industry has evolved so fast and is booming throughout the world as they are barely affected by the slump or monetary comedowns. Those who are passionate about making people pretty can build a career out of it. People want to look attractive not only to foster their self-esteem but also to introduce themselves well among their friends. This can be achievable only with the help of a skilled beautician, cosmetologist, or beauty expert. 
+                                </p>
+                                <ul class="add_info">
+                                    <li>
+                                        <div class="tooltip_styled tooltip-effect-4">
+                                            <span class="tooltip-item"><i class="pe-7s-compass"></i></span>
+                                            <div class="tooltip-content">
+                                                Dedicated Study Plan
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tooltip_styled tooltip-effect-4">
+                                            <span class="tooltip-item"><i class="pe-7s-hourglass"></i></span>
+                                            <div class="tooltip-content">
+                                                Admission Deadline 31/11/2015
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tooltip_styled tooltip-effect-4">
+                                            <span class="tooltip-item"><i class="pe-7s-medal"></i></span>
+                                            <div class="tooltip-content">
+                                                Most Requested Course
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2">
+                            <div class="details_list_col">
+                                <div>
+                                    <a href="{% url 'web:beauticiancourse' %}" class="button_outline">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End strip -->
+
+            </div>
+            <!--End col-md-9 -->
+
+            <aside class="col-md-3">
+                <!-- <div class="banner">
+                    <i class=" iconcustom-school"></i>
+                    <h3>Take a campus tour</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quis eos, autem itaque rerum saepe!
+                    </p>
+                    <a href="{% url 'web:tours' %}" class="banner_bt">Start tour</a>
+                </div> -->
+                <!-- <h4><strong>How to apply</strong></h4>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, deserunt at. Ad voluptas eveniet
+                    aliquid, vero nihil natus dignissimos harum.
+                </p> -->
+                <hr class="styled">
+                <div class="box_side">
+                    <h5>By Phone</h5>
+                    <a href="tel:9037304624"><i class="icon-phone"></i> </a>
+                    <p>
+                        <a href="tel:9037304624">(+91) – 9037304624</a><br>
+                        <small>Monday to Friday 9.00am - 6.00pm</small>
+                    </p>
+                </div>
+                <hr class="styled">
+                <div class="box_side">
+                    <h5>Apply Online</h5>
+                    <i class="icon_desktop"></i>
+                    <p>
+                        Apply Online in minutes! Our simple online application process makes it easy to apply for your desired opportunity. Fill out the required information and submit your application now!
+                    </p>
+                    <p>
+                        <a href="{% url 'web:onlineapplication' %}" class="button small">Apply online</a>
+                    </p>
+                </div>
+            </aside>
+
+        </div>
+        <!--End row -->
+    </div>
+    <!--End container -->
+</div>
+<!--End container_gray_bg -->
+
+
+
+
+{% endblock %}

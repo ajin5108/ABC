@@ -1,0 +1,160 @@
+{% extends 'website/index.html' %}
+{% load static %}
+{% block content %}
+
+<!-- SPECIFIC CSS -->
+<link href="{% static 'websites/css/blog.css' %}" rel="stylesheet">
+
+
+<div class="sub_header bg_1">
+    <div id="intro_txt">
+        <h1>ABC Academy <strong>Blog & Events</strong> page</h1>
+        <!-- <p>Ex saepe accusata duo, vel ne summo option delenit.</p> -->
+    </div>
+</div>
+<!--End sub_header -->
+
+
+
+<!-- Position -->
+
+
+<div class="container_gray_bg">
+    <div class="container margin_60">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="post">
+                    <a href=""><img src="{% static 'websites/img/teachers.jpg' %}" alt="" class="img-responsive"></a>
+                    <!-- <div class="post_info clearfix">
+                        <div class="post-left">
+                            <ul>
+                                <li><i class="icon-calendar-empty"></i>date <em>by Mark</em></li>
+                                <li><i class="icon-inbox-alt"></i><a href="#">Category</a></li>
+                                <li><i class="icon-tags"></i><a href="#">Works</a>, <a href="#">Personal</a></li>
+                            </ul>
+                        </div>
+                        <div class="post-right"><i class="icon-comment"></i><a href="">25 </a></div>
+                    </div> -->
+                    <h2>Celebrating the Accomplishments of Our Former Students</h2>
+                    <p>
+                        We are proud to showcase the achievements of our former students who have gone on to lead successful careers and make a positive impact in their communities. Their dedication to their studies while at our institution, combined with the opportunities available to them, has resulted in their exceptional success.
+                    </p>
+                    <p>
+                        Our former students are a source of inspiration for us all and serve as a testament to the power of education to change lives and make a lasting impact. We are honored to support them in their future endeavors and continue to foster the lifelong connection between our institution and its alumni.
+                    </p>
+                    <!-- <a href="{% url 'web:blogpost' %}" class="button">Read more</a> -->
+                </div><!-- end post -->
+
+                <div class="post">
+                    <a href=""><img src="{% static 'websites/img/graduation.jpg' %}" alt="" class="img-responsive"></a>
+                    <!-- <div class="post_info clearfix">
+                        <div class="post-left">
+                            <ul>
+                                <li><i class="icon-calendar-empty"></i>date <em>by Mark</em></li>
+                                <li><i class="icon-inbox-alt"></i><a href="#">Category</a></li>
+                                <li><i class="icon-tags"></i><a href="#">Works</a>, <a href="#">Personal</a></li>
+                            </ul>
+                        </div>
+                        <div class="post-right"><i class="icon-comment"></i><a href="">25 </a></div>
+                    </div> -->
+                    <h2> Empowering Your Future: Graduation and Career Guidance Program</h2>
+                    <p>
+                        Graduation day is a significant milestone in a person's life and deserves to be celebrated with pomp and grandeur. At ABC academy, we believe that this day should be marked with a certificate that serves as a symbol of your achievements and hard work. Our graduation day certificate giving program is designed to make this day extra special for you and your loved ones.
+                    </p>
+                    <p>
+                        Our team of experts will work with you to create customized certificates that reflect your individual accomplishments and style. Whether you are graduating from high school, college, or any other educational institution, we have a certificate that fits your needs.
+
+
+                    </p>
+                    <p>
+                        In addition to our certificate giving program, we also offer a range of graduation day programs to help make your day even more memorable. From photoshoots to award ceremonies, our team will work with you to create an experience that is tailored to your specific needs and preferences.
+                    </p>
+                    <p> 
+                        So, whether you're looking to make your graduation day a special celebration or simply want to show your appreciation for your accomplishments, ABC academy has everything you need to make this day one to remember. Contact us today to learn more about our certificate giving and graduation day programs.
+                    </p>
+                    <!-- <a href="" class="button">Read more</a> -->
+                </div><!-- end post -->
+
+                <div class="post">
+                    <a href=""><img src="{% static 'websites/img/artsfest.jpg' %}" alt="" class="img-responsive"></a>
+                    <!-- <div class="post_info clearfix">
+                        <div class="post-left">
+                            <ul>
+                                <li><i class="icon-calendar-empty"></i>date <em>by Mark</em></li>
+                                <li><i class="icon-inbox-alt"></i><a href="#">Category</a></li>
+                                <li><i class="icon-tags"></i><a href="#">Works</a>, <a href="#">Personal</a></li>
+                            </ul>
+                        </div>
+                        <div class="post-right"><i class="icon-comment"></i><a href="">25 </a></div>
+                    </div> -->
+                    <h2> Celebrating Creativity: Arts Fest for Young Minds</h2>
+                    <p>
+                        At ABC academy, we believe that every child deserves the chance to express their creativity and imagination. That's why we are proud to present our Arts Fest program, designed specifically for young minds.
+                    </p>
+                    <p>
+                        The Arts Fest program provides children with the opportunity to participate in a range of fun and engaging activities that encourage them to explore their creative side. From painting and drawing to sculpting and collage, the program offers a wealth of activities that are sure to ignite the imagination and spark a lifelong love of the arts.
+                    </p>
+                    <p> 
+                        Our team of experienced artists and educators will work with the children to help them unleash their full creative potential and develop their skills in a supportive and nurturing environment. The Arts Fest program is designed to be both educational and enjoyable, providing children with the opportunity to learn new techniques and make new friends
+                    </p>
+
+                    <p>
+
+                        So why not join us for a day of creativity, learning, and fun? We are sure that your child will leave the Arts Fest program with a renewed sense of confidence and inspiration. Contact ABC academy today to learn more about the Arts Fest program and how you can get involved
+                    </p>
+                    <!-- <a href="" class="button">Read more</a> -->
+                </div><!-- end post -->
+
+                
+
+
+                <!-- <div class="text-center">
+                    <ul class="pagination">
+                        <li><a href="">Prev</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <li><a href="">Next</a></li>
+                    </ul>
+                </div> -->
+            </div><!-- End col-md-8-->
+
+            <!-- <aside class="col-md-3" id="sidebar">
+
+                <div class="widget">
+                    <div id="custom-search-input">
+                        <div class="input-group col-md-12">
+                            <input type="text" class="form-control input-lg" placeholder="Search" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-info btn-lg" type="button">
+                                    <i class="icon-search-1"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div><!-- End Search -->
+                <hr>
+                <!-- <div class="widget">
+                    <h4>Categories</h4>
+                    <ul id="cat_nav">
+                        <li><a href="{% url 'web:news' %}">News</a></li>
+                        <li><a href="{% url 'web:events' %}">Events</a></li>
+                        <li><a href="{% url 'web:blog' %}">Blogs</a></li>
+                    </ul>
+                </div> -->
+                <!-- End widget -->
+
+                <hr>
+            </aside> 
+            <!-- End aside -->
+
+        </div><!-- End row-->
+    </div><!-- End container -->
+</div>
+
+
+
+{% endblock %}

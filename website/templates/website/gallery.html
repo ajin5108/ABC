@@ -1,0 +1,156 @@
+{% extends 'website/index.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="sub_header bg_4">
+    <div id="intro_txt">
+        <h1>ABC academy <strong>Gallery</strong></h1>
+       
+    </div>
+</div>
+<!--End sub_header -->
+
+<!-- <div id="position">
+    <div class="container">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Category</a></li>
+            <li>Page active</li>
+        </ul>
+    </div>
+</div> -->
+<!-- Position -->
+
+
+<div class="container margin_60">
+    <section class="grid">
+        <div class="main_title">
+            <h2>Here some pictures ...</h2>
+            <!-- <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p> -->
+        </div>
+        <div class="row">
+            <ul class="magnific-gallery">
+                <li>
+                    <figure>
+                        <img src="{% static 'websites/img/gallery/1.jpg' %}" alt="">
+                        <figcaption>
+                            <div class="caption-content">
+                                <a href="{% static 'websites/img/gallery/large/1.jpg' %}" title="Photo title"
+                                    data-effect="mfp-move-horizontal">
+                                    <i class="pe-7s-albums"></i>
+                                    <p>Your caption</p>
+                                </a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="{% static 'websites/img/gallery/2.jpg' %}" alt="">
+                        <figcaption>
+                            <div class="caption-content">
+                                <a href="{% static 'websites/img/gallery/large/2.jpg' %}" title="Photo title"
+                                    data-effect="mfp-move-horizontal">
+                                    <i class="pe-7s-albums"></i>
+                                    <p>Your caption</p>
+                                </a>
+                            </div>
+
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="{% static 'websites/img/gallery/3.jpg' %}" alt="">
+                        <figcaption>
+                            <div class="caption-content">
+                                <a href="{% static 'websites/img/gallery/large/3.jpg' %}" title="Photo title"
+                                    data-effect="mfp-move-horizontal">
+                                    <i class="pe-7s-albums"></i>
+                                    <p>Your caption</p>
+                                </a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="{% static 'websites/img/gallery/4.jpg' %}" alt="">
+                        <figcaption>
+                            <div class="caption-content">
+                                <a href="{% static 'websites/img/gallery/large/4.jpg' %}" title="Photo title">
+                                    <i class="pe-7s-albums"></i>
+                                    <p>Your caption</p>
+                                </a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <ul class="magnific-gallery">
+                <li>
+                    <figure>
+                        <img src="{% static 'websites/img/gallery/5.jpg' %}" alt="">
+                        <figcaption>
+                            <div class="caption-content">
+                                <a href="{% static 'websites/img/gallery/large/5.jpg' %}" title="Photo title">
+                                    <i class="pe-7s-albums"></i>
+                                    <p>Your caption</p>
+                                </a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="{% static 'websites/img/gallery/6.jpg' %}" alt="">
+                        <figcaption>
+                            <div class="caption-content">
+                                <a href="{% static 'websites/img/gallery/large/6.jpg' %}" title="Photo title">
+                                    <i class="pe-7s-albums"></i>
+                                    <p>Your caption</p>
+                                </a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="{% static 'websites/img/gallery/7.jpg' %}" alt="">
+                        <figcaption>
+                            <div class="caption-content">
+                                <a href="{% static 'websites/img/gallery/large/7.jpg' %}" title="Photo title">
+                                    <i class="pe-7s-albums"></i>
+                                    <p>Your caption</p>
+                                </a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="{% static 'websites/img/gallery/8.jpg' %}" alt="">
+                        <figcaption>
+                            <div class="caption-content">
+                                <a href="{% static 'websites/img/gallery/large/8.jpg' %}" title="Photo title">
+                                    <i class="pe-7s-albums"></i>
+                                    <p>Your caption</p>
+                                </a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+
+
+{% endblock %}
+
+
+
